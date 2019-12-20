@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <h2>11{{childestr}}22</h2>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -31,10 +32,24 @@
 </template>
 
 <script>
+import {a} from "../../gitSubmoduleModule/test"
 export default {
   name: 'HelloWorld',
+  data(){
+    return {
+      childestr:'lalala'
+    }
+  },
   props: {
     msg: String
+  },
+  mounted(){
+    this.init()
+  },
+  methods:{
+    init(){
+      console.log(a)
+    }
   }
 }
 </script>
